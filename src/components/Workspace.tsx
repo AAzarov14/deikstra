@@ -51,7 +51,7 @@ const Workspace = () => {
 
     return (
         <div id='workspace' ref={wRef} onContextMenu={handleTableContext}>
-            <motion.div drag dragConstraints={wRef} className='w-1/2 h-1/2 bgImgContainer' dragPropagation dragMomentum={false}>
+            <motion.div drag dragConstraints={wRef} className={clsx('w-1/2', 'h-1/2', 'bgImgContainer', !imageData.src && 'hidden')} dragPropagation dragMomentum={false}>
                 <img src={imageData.src ? imageData.src : ""} id='bgImg' className='object-contain' style={{filter: `brightness(${imageData.brightness})`,transform: `scale(${imageData.scale})`, zIndex: 1, pointerEvents: "none"}} ></img>
             </motion.div>
             {edges.map((link:any, index:number) => (
