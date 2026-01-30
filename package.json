@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://aazarov14.github.io/deikstra/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -11,7 +12,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://aazarov14.github.io/deikstra/",
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^12.29.0",
